@@ -1,5 +1,4 @@
 import {Link, useNavigate} from "react-router-dom";
-import {assets} from "../assets/assets.js";
 import {useContext, useRef, useState} from "react";
 import {AppContext} from "../context/AppContext.jsx";
 import axios from "axios";
@@ -96,7 +95,6 @@ const ResetPassword = () => {
             style={{background: "linear-gradient(90deg, #6a5af9, #8268f9)", border: "none"}}>
 
             <Link to="/" className="position-absolute top-0 start-0 p-4 d-flex align-items-center gap-2 text-decoration-none">
-                <img src={assets.logo} alt="logo" height={32} width={32} />
                 <span className="fs-4 fw-semibold text-light">Authify</span>
             </Link>
 

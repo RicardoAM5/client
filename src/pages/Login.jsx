@@ -1,5 +1,4 @@
 import {Link, useNavigate} from "react-router-dom";
-import {assets} from "../assets/assets.js";
 import {useContext, useState} from "react";
 import axios from "axios";
 import {AppContext} from "../context/AppContext.jsx";
@@ -60,7 +59,6 @@ const Login = () => {
                     fontSize: "24px",
                     textDecoration: "none",
                 }}>
-                    <img src={assets.logo} alt="logo" height={32} width={32} />
                     <span className="fw-bold fs-4 text-light">Authify</span>
                 </Link>
 

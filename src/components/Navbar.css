@@ -1,0 +1,100 @@
+/* ============================================
+   NAVBAR - ESTILOS DEL MENÚ LATERAL
+   ============================================ */
+
+/* --------------------------------------------
+   ANIMACIONES
+   -------------------------------------------- */
+
+/**
+ * Animación de deslizamiento hacia abajo
+ * Usada para la apertura suave de los submenús
+ */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* --------------------------------------------
+   ITEMS PRINCIPALES DEL MENÚ
+   -------------------------------------------- */
+
+/**
+ * Estilos base para los items principales del menú
+ * - Borde izquierdo transparente que se activa en hover/active
+ * - Transición suave para todos los cambios de estado
+ */
+.menu-item {
+    background: transparent;
+    font-size: 0.85rem;
+    font-weight: 500;
+    border: none;
+    border-left: 3px solid transparent;
+    transition: all 0.25s ease;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+/**
+ * Estado hover del item
+ * - Fondo gris claro
+ * - Borde azul a la izquierda
+ * - Incrementa padding para compensar el ancho del borde
+ */
+.menu-item:hover {
+    background: #f0f2f5;
+    border-left-color: #0d6efd;
+    padding-left: calc(1rem + 3px);
+}
+
+/**
+ * Estado activo (página actual)
+ * - Fondo azul muy claro
+ * - Borde azul destacado
+ */
+.menu-item.active {
+    background: #eef2ff !important;
+    border-left-color: #0d6efd !important;
+}
+
+/* --------------------------------------------
+   SUBMENÚ
+   -------------------------------------------- */
+
+/**
+ * Contenedor del submenú
+ * - Fondo ligeramente más oscuro que el menú principal
+ * - Aplica animación de deslizamiento al abrirse
+ */
+.submenu-container {
+    background: #f8f9fa;
+    animation: slideDown 0.25s ease-out;
+}
+
+/**
+ * Items individuales del submenú
+ * - Tamaño de fuente reducido para jerarquía visual
+ * - Color de texto más tenue
+ */
+.submenu-item {
+    font-size: 0.8rem;
+    color: #495057;
+    border: none;
+    transition: all 0.25s ease;
+}
+
+/**
+ * Estado hover del item de submenú
+ * - Fondo gris
+ * - Aumenta padding izquierdo para efecto de indentación
+ */
+.submenu-item:hover {
+    background: #e9ecef;
+    padding-left: calc(2.5rem + 5px);
+}
